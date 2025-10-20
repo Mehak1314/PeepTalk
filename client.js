@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("https://peep-talk.onrender.com");
 const form = document.getElementById('send');
 const messageInput = document.getElementById('send_msg');
 const messageContainer = document.getElementById('msgbox');
