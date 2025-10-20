@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeepTalk- Talk Real, Stay Connected</title>
+    <link rel="shortcut icon" href="img/logoo.png" type="image/x-icon">
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="client.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* ensure padding doesn't increase width and cause horizontal scroll */
+    }
+    nav{
+        width: 100%;
+        height: 70px;
+        background-color: #0cc4a2;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    #logo{
+        height: 80px;
+    }
+    hr{
+        border: none;
+        height: 2px;
+        background-color: #0cc4a2;
+    }
+    .container{
+        width: 50%;
+        display: block;
+        margin: auto;
+        background-color: #f5f5f5;
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border: 1px solid #0cc4a2;
+        height: auto;
+    }
+    .mymargin{
+        height: 20px;
+    }
+    .myheading{
+        text-align: center;
+        /* increased size/spacing for taller heading */
+        font-size: 34px;
+        line-height: 57px; /* original: 40px */
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #0cc4a2;
+        font-weight: bold;
+        height: 60px; /* original: 40px */
+        background-color: #e0f7f4;
+        margin-bottom: 20px;
+    }
+    .msg{
+        width: fit-content;
+        max-width: 70%;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        border: 1px solid #0cc4a2;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    .right{
+        background-color: #d1f0ed;
+        margin-left: auto;
+    }
+    .left{
+        background-color: #ffffff;
+        margin-right: auto;
+    }
+    .center{
+        background-color: #0cc4a2;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 600;
+        border: none;
+        color: white;
+        display: block;
+        text-align: center;
+        width: 60% !important;
+        margin: 10px auto;
+        padding: 8px 15px;
+        border-radius: 8px;
+    }
+    #msgbox{
+        width: 95%;
+        height: 420px;
+        margin: auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    #send,form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    #send_msg{
+        width: 80%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #0cc4a2;
+        font-size: 16px;
+        background-color: #ffffff;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #sendbtn{
+        padding: 8px 16px;
+        margin-left: 6px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0cc4a2;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    @media (max-width:730px) {
+        .container{
+            width: 95%;
+            height: auto;
+        }
+    }
+</style>
+<body>
+    <nav>
+        <img src="img/logoo.png" alt="" id="logo">
+    </nav>
+    <hr>
+    <div class="mymargin"></div>
+    <div class="container">
+        <div class="myheading">PeepTalk</div>
+        <div id="msgbox">
+            <!-- <div class="msg center">__ joined the Party</div>
+            <div class="msg right">Shivji:Hi</div>
+            <div class="msg left">Mehak:Hello</div>
+            <div class="msg center">__ left the Party</div> -->
+        </div>
+        <div class="msgsend">
+            <form action="#" id="send">
+                <input type="text" name="send_msg" id="send_msg">
+                <button id="sendbtn">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
