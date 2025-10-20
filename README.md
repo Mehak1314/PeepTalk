@@ -7,7 +7,7 @@ It’s lightweight, fast, and designed for seamless real-time communication.
 
 ## 🌐 Live Demo / Backend
 You can access the live backend here:  
-[https://your-render-backend-url.onrender.com](https://your-render-backend-url.onrender.com)
+[https://peep-talk.onrender.com](https://peep-talk.onrender.com/)
 
 > Note: This project currently runs only on the Render backend. To test the real-time chat, connect via a local frontend or use the backend endpoints directly.
 
@@ -59,7 +59,6 @@ node index.js
 
 ## 👩‍💻 Author
 **Mehak Garg**  
-_First-year Computer Engineering student at Thapar University_  
 
 **GitHub:** [Mehak1314](https://github.com/Mehak1314)  
-**Live Backend:** [PeepTalk on Render](https://your-render-backend-url.onrender.com)
+**Live Backend:** [PeepTalk on Render](https://peep-talk.onrender.com/)
